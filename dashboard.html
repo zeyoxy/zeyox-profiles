@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dashboard — Zeyox Profiles</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <main class="shell dashboard">
+    <header class="topbar"><a class="brand" href="/">Zeyox Profiles</a><button id="logout" class="btn ghost">Déconnexion</button></header>
+    <section class="card form-card">
+      <div class="dash-head"><div><h1>Mon profil</h1><p id="url" class="muted"></p></div><a id="preview" class="btn ghost" target="_blank">Voir mon profil</a></div>
+      <form id="profileForm" class="grid-form">
+        <label>Nom affiché<input id="displayName" maxlength="40" /></label>
+        <label>URL avatar<input id="avatarUrl" type="url" maxlength="500" placeholder="https://..." /></label>
+        <label class="wide">Bio<textarea id="bio" maxlength="280" rows="4" placeholder="Quelques mots sur toi..."></textarea></label>
+        <label>Couleur<input id="accent" type="color" value="#7c3aed" /></label>
+        <label>Fond<input id="background" type="color" value="#09090f" /></label>
+        <label class="wide">Liens <span class="muted">(un par ligne : titre | URL)</span><textarea id="links" rows="7" placeholder="Discord | https://discord.com/\nGitHub | https://github.com/"></textarea></label>
+        <button class="btn primary full wide" type="submit">Enregistrer le profil</button>
+      </form>
+      <div id="msg" class="msg" hidden></div>
+    </section>
+  </main>
+  <script src="/dashboard.js"></script>
+</body>
+</html>
